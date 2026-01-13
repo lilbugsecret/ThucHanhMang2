@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /*
+    Bài 3: Chuyển đổi chữ thường sang chữ hoa và ngược lại
+        Mô tả: Viết chương trình nhập vào một chuỗi và chuyển đổi tất cả các ký tự chữ thường thành chữ hoa, đồng thời chuyển chữ hoa thành chữ thường.
+        Ví dụ:
+        Đầu vào: 'The Quick Brown Fox'
+        Kết quả: 'tHE qUICK bROWN fOX'
+    */
+    let inPut = "The Quick Brown Fox";
+    let ketQua = [];
+    for (let i = 0; i < inPut.length; i++) {
+      let kiTu = inPut[i];
+      if (kiTu === kiTu.toLocaleUpperCase()) {
+        ketQua.push(kiTu.toLocaleLowerCase());
+      } else if (kiTu === kiTu.toLocaleLowerCase()) {
+        ketQua.push(kiTu.toLocaleUpperCase());
+      } else ketQua.push(kiTu);
+    }
+    console.log(ketQua.join(""));
+  </script>
+</html>

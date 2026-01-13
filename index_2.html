@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /*
+     Bài 2: Chèn dấu "-" giữa các số chẵn
+         Mô tả: Viết chương trình nhận một chuỗi số nhập vào từ người dùng và chèn dấu - giữa hai số chẵn liên tiếp trong chuỗi.
+         Ví dụ:
+         Đầu vào: "025468"
+         Kết quả: "0-254-6-8"
+     */
+    let str = "025468";
+    let result = [str[0]];
+    for (let i = 1; i < str.length; i++) {
+      let soTruoc = str[i - 1];
+      let soHienTai = str[i];
+      if (soTruoc % 2 === 0 && soHienTai % 2 === 0) {
+        result.push("-");
+      }
+      result.push(soHienTai);
+    }
+    console.log(result.join(""));
+  </script>
+</html>
