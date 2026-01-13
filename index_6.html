@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trò chơi gõ chữ vui nhộn</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body style="text-align: center">
+    <h2>Hãy nhập cảm nghĩ của bạn vào đây:</h2>
+    <textarea id="txt" cols="40" rows="10" oninput="fakeType()"></textarea>
+
+    <script>
+      let str = "HUY RẤT ĐẸP TRAI!!! CHÍNH XÁC LÀ NHƯ VẬY ĐẤY.";
+      let arrayStr = str.split("");
+
+      function fakeType() {
+        let textArea = document.getElementById("txt");
+        let currentText = textArea.value;
+        L;
+        let output = "";
+
+        if (currentText.length > arrayStr.length) {
+          textArea.value = "";
+          return;
+        }
+
+        for (let i = 0; i < currentText.length; i++) {
+          output += arrayStr[i];
+        }
+
+        textArea.value = output;
+      }
+    </script>
+  </body>
+</html>
